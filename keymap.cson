@@ -30,23 +30,35 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
-'atom-text-editor:not([mini])':
-  'alt-;': 'editor:toggle-line-comments'
+
+##
+
+'atom-text-editor:not([mini])': ## Selector
+  'alt-;': 'editor:toggle-line-comments' ## 'keystroke': 'Command'
   'escape <': 'core:move-to-top'
   'escape >': 'core:move-to-bottom'
   'escape w': 'core:copy'
   'ctrl-a': 'editor:move-to-first-character-of-line'
-  # 'ctrl-a': 'editor:move-to-beginning-of-line'
-  # 'tab': 'editor:auto-indent'
+  'ctrl-k': 'editor:cut-to-end-of-buffer-line'
 
 'atom-text-editor, atom-workspace':
   'alt-left': 'unset!'
   'alt-right': 'unset!'
-  # 'alt-a': 'core:select-all'
   'ctrl-e':'editor:move-to-end-of-screen-line'
 
 'body':
+  'ctrl-x': 'unset!'
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab': 'pane:show-previous-item'
   'alt-down': 'window:focus-pane-below'
   'alt-up': 'window:focus-pane-above'
   'alt-left': 'window:focus-pane-on-left'
   'alt-right': 'window:focus-pane-on-right'
+
+'atom-text-editor':
+  'alt-x': 'command-palette:toggle'
+
+'atom-text-editor[data-grammar~="latex"]':
+  'ctrl-alt-j': 'latex:build'
