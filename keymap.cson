@@ -40,6 +40,8 @@
   'escape w': 'core:copy'
   'ctrl-a': 'editor:move-to-first-character-of-line'
   'ctrl-k': 'editor:cut-to-end-of-buffer-line'
+  'ctrl-up': 'unset!'
+  'ctrl-down': 'unset!'
 
 'atom-text-editor, atom-workspace':
   'alt-left': 'unset!'
